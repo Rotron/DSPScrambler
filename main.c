@@ -22,7 +22,7 @@
  */
 
 /*
-  Header definitions
+	Header definitions
 */
 
 #include <stdio.h>
@@ -44,8 +44,8 @@ int startx = 0; // Defines window starting point for x
 int starty = 0; // Defines window starting point for y
 // Defines menu choices
 char *choices[] = { 
-			"Filter On",
-			"Filter Off",
+			"Scrambler On",
+			"Scrambler Off",
 			"Exit"
 		  };
 int n_choices = sizeof(choices) / sizeof(char *);
@@ -174,7 +174,7 @@ void print_menu(WINDOW *menu_win, int highlight)
 {
 	int x, y, i;	
 
-	mvwprintw(menu_win, 1, 2, "Low Pass FIR Filter, fc = %d Hz", SAMPLE_RATE);
+	mvwprintw(menu_win, 1, 2, "Voice Scrambler, fc = %d Hz", SAMPLE_RATE);
 	mvwprintw(menu_win, 2, 2, "Left Channel");
 	mvwprintw(menu_win, 3, 2, "_________________________________");
 	x = 2;
